@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.und.softwaretool</groupId>
 	<artifactId>softwaretool</artifactId>
@@ -10,6 +9,8 @@
 	</build>
 	<properties>
 		<java-version>1.8</java-version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring-framework.version>4.2.1.RELEASE</spring-framework.version>
 		<spring.version>4.2.1.RELEASE</spring.version>
 		<spring-security-version>4.0.2.RELEASE</spring-security-version>
@@ -36,13 +37,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>1.7.0.RELEASE</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
@@ -63,7 +57,7 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
-			<version>$[4.1.1,)</version>
+			<version>4.1.1.RELEASE</version>
 		</dependency>
 		<!-- Other Web dependencies -->
 		<dependency>

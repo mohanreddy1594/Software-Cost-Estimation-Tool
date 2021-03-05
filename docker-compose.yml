@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  app:
+    container_name: softwaretool
+    image: softwaretool
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  db:
+    container_name: mysql
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+        - software_tool_db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pa$$W0rd
+      MYSQL_DATABASE: softwaretool
+      MYSQL_USER: sampleUser
+      MYSQL_PASSWORD: samplePassword
+
+volumes:
+  software_tool_db_data: {}
