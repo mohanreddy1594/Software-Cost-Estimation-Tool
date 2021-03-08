@@ -10,6 +10,8 @@ FROM tomcat:8.0.20-jre8
 ARG JAVA_OPTS
 ENV JAVA_OPTS=$JAVA_OPTS
 
+
 COPY config/tomcat-users.xml /usr/local/tomcat/conf/
+COPY config/data /usr/local/data
 COPY --from=build /home/app/target/softwaretool.war /usr/local/tomcat/webapps/softwaretool.war
 CMD ["catalina.sh", "run"]
