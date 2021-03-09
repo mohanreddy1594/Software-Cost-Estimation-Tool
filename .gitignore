@@ -27,3 +27,6 @@ hs_err_pid*
 .settings/
 .gitignore.swp
 *~*
+.DS_Store
+.factorypath
+docker-compose.override.yml
